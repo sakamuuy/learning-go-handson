@@ -2,6 +2,16 @@ package main
 
 import "fmt"
 
+var myData struct {
+	Name string
+	Data []int
+}
+
+type MyData struct {
+	Name string
+	Data []int
+}
+
 func main() {
 	// n := 123
 	// p := &n
@@ -20,7 +30,19 @@ func main() {
 	// fmt.Printf("p2 value:%d, address%p\n", *p2, p2)
 
 	// run()
-	sl()
+	// sl()
+
+	// myData.Name = "Taro"
+	// myData.Data = []int{10, 20, 30}
+	// fmt.Println(myData)
+
+	taro := MyData{"taro", []int{10, 20, 30}}
+	hanako := MyData{
+		Name: "hanako",
+		Data: []int{90, 80, 60},
+	}
+	fmt.Println(taro)
+	fmt.Println(hanako)
 }
 
 func run() {
