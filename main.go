@@ -18,6 +18,9 @@ func main() {
 	// p2 = pb
 	// fmt.Printf("p value:%d, address%p\n", *p, p)
 	// fmt.Printf("p2 value:%d, address%p\n", *p2, p2)
+
+	// run()
+	sl()
 }
 
 func run() {
@@ -35,4 +38,17 @@ func change1(n int) {
 
 func change2(n *int) {
 	*n *= 2
+}
+
+func sl() {
+	ar := []int{10, 20, 30}
+	fmt.Println(ar)
+	initial(&ar)
+	fmt.Println(ar)
+}
+
+func initial(ar *[]int) {
+	for i := 0; i < len(*ar); i++ {
+		(*ar)[i] = 0
+	}
 }
