@@ -42,6 +42,8 @@ func main() {
 		Data: []int{90, 80, 60},
 	}
 	fmt.Println(taro)
+	rev(&taro)
+	fmt.Println(taro)
 	fmt.Println(hanako)
 }
 
@@ -73,4 +75,13 @@ func initial(ar *[]int) {
 	for i := 0; i < len(*ar); i++ {
 		(*ar)[i] = 0
 	}
+}
+
+func rev(md *MyData) {
+	od := (*md).Data
+	nd := []int{}
+	for i := len(od) - 1; i >= 0; i-- {
+		nd = append(nd, od[i])
+	}
+	md.Data = nd
 }
