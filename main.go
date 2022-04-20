@@ -36,15 +36,21 @@ func main() {
 	// myData.Data = []int{10, 20, 30}
 	// fmt.Println(myData)
 
-	taro := MyData{"taro", []int{10, 20, 30}}
-	hanako := MyData{
-		Name: "hanako",
-		Data: []int{90, 80, 60},
-	}
+	// taro := MyData{"taro", []int{10, 20, 30}}
+	// hanako := MyData{
+	// 	Name: "hanako",
+	// 	Data: []int{90, 80, 60},
+	// }
+	// fmt.Println(taro)
+	// rev(&taro)
+	// fmt.Println(taro)
+	// fmt.Println(hanako)
+
+	taro := new(MyData)
 	fmt.Println(taro)
-	rev(&taro)
+	taro.Name = "Taro"
+	taro.Data = make([]int, 5)
 	fmt.Println(taro)
-	fmt.Println(hanako)
 }
 
 func run() {
