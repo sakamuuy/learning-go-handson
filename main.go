@@ -12,6 +12,13 @@ type MyData struct {
 	Data []int
 }
 
+func (md MyData) PrintData() {
+	fmt.Println("*** MyData ***")
+	fmt.Println(md.Name)
+	fmt.Println(md.Data)
+	fmt.Println("*** end ***")
+}
+
 func main() {
 	// n := 123
 	// p := &n
