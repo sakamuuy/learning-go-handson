@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 var myData struct {
 	Name string
@@ -10,6 +12,18 @@ var myData struct {
 type MyData struct {
 	Name string
 	Data []int
+}
+
+type intp int
+
+func (num intp) IsPrime() bool {
+	n := int(num)
+	for i := 2; i <= (n / 2); i++ {
+		if n%i == 0 {
+			return false
+		}
+	}
+	return true
 }
 
 func (md MyData) PrintData() {
@@ -53,11 +67,13 @@ func main() {
 	// fmt.Println(taro)
 	// fmt.Println(hanako)
 
-	taro := new(MyData)
-	fmt.Println(taro)
-	taro.Name = "Taro"
-	taro.Data = make([]int, 5)
-	fmt.Println(taro)
+	// taro := new(MyData)
+	// fmt.Println(taro)
+	// taro.Name = "Taro"
+	// taro.Data = make([]int, 5)
+	// fmt.Println(taro)
+
+	// s := hello.Input("type a number")
 }
 
 func run() {
